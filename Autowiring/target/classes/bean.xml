@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <!-- Definition for textEditor bean -->
+   <bean id = "register" class = "com.model.Register" autowire="byName">
+      
+   </bean>
+  
+   <bean id = "employee" class = "com.model.Employee" autowire="byName">
+   </bean>
+   <bean id = "manager" class = "com.model.Manager" autowire="byType">
+      
+   </bean>
+   <bean id = "branch" class = "com.model.Branch"  autowire="byName">
+      
+   </bean>
+    <bean id = "custom" class = "com.model.Customer" autowire="byType">
+      
+   </bean>
+
+   <!-- Definition for spellChecker bean -->
+   <bean id = "bank" class = "com.model.Bank"  autowire="byType">
+   </bean>
+
+</beans>
