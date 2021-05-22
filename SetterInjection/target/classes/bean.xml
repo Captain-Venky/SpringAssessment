@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <!-- Definition for textEditor bean -->
+   <bean id = "test" class = "com.model.Tests">
+      <property name="testName" value = "bloodtest"></property>
+      <property name="price" value = "250.0"></property>
+   </bean>
+   <bean id = "medicines" class = "com.model.Medicines">
+       <property name="name" value = "bloodtest"></property>
+      <property name="quantity" value = "250"></property>
+       <property name="price" value = "150.0"></property>
+     
+   </bean>
+   <bean id = "user" class = "com.model.User">
+      <property name="name" value = "Venky"></property>
+      <property name="mobileNo" value = "4535431311"></property>
+       <property name="email" value = "venky@gmail.com"></property>
+      
+   </bean>
+   <bean id = "admin" class = "com.model.Admin">
+      <property name="empid" value = "123456"></property>
+      <property name="password" value = "admin123"></property>
+   </bean>
+   <bean id = "branch" class = "com.model.Branch">
+      <property name="branchcode" value ="4723" />
+      <property name="area" value ="PipuleRoad"/>
+      <property name="city" value ="Vijayawada"/>
+     <property name="pincode" value ="520001"/> 
+   </bean>
+
+   <!-- Definition for spellChecker bean -->
+   <bean id = "pharmacy" class = "com.model.Pharmacy">
+    <property name="admin" ref="admin" />
+	<property name="user" ref="user" />
+	<property name="branch" ref="branch" />
+	<property name="medicine" ref="medicines" /> 
+	<property name="test" ref="test" /> 
+   </bean>
+
+</beans>
